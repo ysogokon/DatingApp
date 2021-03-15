@@ -24,7 +24,7 @@
           <div class="dropdown mb-2" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
             <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | titlecase}}</a>
             <div class="dropdown-menu mt-3" style="cursor:pointer;" *dropdownMenu>
-              <a class="dropdown-item" style="cursor: pointer;">Edit Profile</a>
+              <a routerLink="/member/edit" class="dropdown-item" style="cursor: pointer;">Edit Profile</a>
               <div class="dropwdown-divider"></div>
               <a class="dropdown-item" (click)="logout()">Logout</a>
             </div>
