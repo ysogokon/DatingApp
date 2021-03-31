@@ -22,6 +22,7 @@ namespace API.Extensions
                 options.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ILikesRepository, LikesRepository>();
             services.AddDbContext<DataContext> (options => options.UseSqlite(config.GetConnectionString("DefaultConnection")));
 
             return services;
