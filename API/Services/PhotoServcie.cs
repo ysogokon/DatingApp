@@ -8,10 +8,10 @@ using Microsoft.Extensions.Options;
 
 namespace API.Services
 {
-    public class PhotoServcie : IPhotoService
+    public class PhotoService : IPhotoService
     {
         private readonly Cloudinary _cloudinary;
-        public PhotoServcie(IOptions<CloudinarySettings> config)
+        public PhotoService(IOptions<CloudinarySettings> config)
         {
             var acc = new Account
             (
